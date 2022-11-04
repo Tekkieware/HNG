@@ -28,7 +28,7 @@ def calculate(request):
         first_number = ''
     message = ''    
     #addition logic
-    if operation_type.strip().lower() == 'addition' or operation_type.strip().lower().__contains__('addition') or operation_type.strip().lower().__contains__('add') or operation_type.strip().lower().__contains__('adding') or operation_type.strip().lower().__contains__('plus'):
+    if operation_type.strip().lower() == 'addition' or operation_type.strip().lower().__contains__('addition') or operation_type.strip().lower().__contains__('add') or operation_type.strip().lower().__contains__('adding') or operation_type.strip().lower().__contains__('plus') or operation_type.strip().lower().__contains__('total') or operation_type.strip().lower().__contains__('sum'):
         #when numbers are given
         if first_number and second_number:
             result = first_number + second_number
@@ -43,7 +43,7 @@ def calculate(request):
             except IndexError:
                 message = 'Please provide two valid numbers'          
     #subtraction logic     
-    elif operation_type.strip() == 'subtraction' or operation_type.strip().lower().__contains__('subtraction') or operation_type.strip().lower().__contains__('subtract') or operation_type.strip().lower().__contains__('minus') or operation_type.strip().lower().__contains__('subtracting'):
+    elif operation_type.strip() == 'subtraction' or operation_type.strip().lower().__contains__('subtraction') or operation_type.strip().lower().__contains__('subtract') or operation_type.strip().lower().__contains__('minus') or operation_type.strip().lower().__contains__('subtracting') or operation_type.strip().lower().__contains__('sub') or operation_type.strip().lower().__contains__('deduct'):
         #numbers are given
         if first_number and second_number:
             result = first_number - second_number
@@ -58,7 +58,7 @@ def calculate(request):
             except IndexError:
                 message = 'Please provide two valid numbers'
     #multiplication logic
-    elif operation_type.strip() == 'multiplication' or operation_type.strip().lower().__contains__('multiplication') or operation_type.strip().lower().__contains__('multiply') or operation_type.strip().lower().__contains__('multiplying') or operation_type.strip().lower().__contains__('times'):
+    elif operation_type.strip() == 'multiplication' or operation_type.strip().lower().__contains__('multiplication') or operation_type.strip().lower().__contains__('multiply') or operation_type.strip().lower().__contains__('multiplying') or operation_type.strip().lower().__contains__('times') or operation_type.strip().lower().__contains__('mul') or operation_type.strip().lower().__contains__('product'):
         #numbers are given
         if first_number and second_number:
             result = first_number * second_number
